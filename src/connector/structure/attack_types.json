@@ -1,0 +1,9 @@
+{
+  "AttackTypes": {
+    "SQLi": {"description": "SQL injection: SQL fragments, tautologies, UNION/SELECT, SQL keywords."},
+    "XSS": {"description": "Cross-site scripting: script tags, javascript: URIs, event handlers, encoded variants."},
+    "CmdInject": {"description": "Command injection: shell operators, backticks, chained commands."},
+    "DoS/DDoS": {"description": "High request frequency, very large payloads, repeated identical requests."}
+  },
+  "zero_shot": true
+}

